@@ -44,3 +44,19 @@ exit 을 통해 나갈 수 있음
 
 14. `docker run -p 80:80 -v ~/host경로:~/container안의 경로/ CONTAINER`
 HOST 환경을 사용하여 작업을 할 수 있는 서버 설정
+
+## Docker build 파일 만들기
+1. docker build (`-t 이름`) `PATH` > 이미지 만들기
+
+2. docker run ~~~ > Container 만들기
+
+## Dockerfile 명령어
+1. FROM : 운영체제를 가져오는 듯
+
+2. RUN : linux 명령어 실행 // 빌드가 되는 시점에 실행
+
+3. WORKDIR : 디렉토리 없으면 만들고, 사용자를 이동하고, 이제부터 시작하는 RUN / ENTRY POINT / 등이 실행될 때 저 곳에서 실행.
+
+4. CMD : [] 대괄호 안에 넣어서 // 컨테이너 실행 시에 실행
+
+5. 명령어를 자동으로 실행되지 않게 하려면, docker run 명령을 입력할 때 맨 뒤에 pwd라고 입력하면, cmd 대신 명령을 입력할 수 있음 (like overriding)

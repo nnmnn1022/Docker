@@ -45,6 +45,8 @@ exit 을 통해 나갈 수 있음
 14. `docker run -p 80:80 -v ~/host경로:~/container안의 경로/ CONTAINER`
 HOST 환경을 사용하여 작업을 할 수 있는 서버 설정
 
+15. 
+
 ## Docker build 파일 만들기
 1. docker build (`-t 이름`) `PATH` > 이미지 만들기
 

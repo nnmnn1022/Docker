@@ -40,3 +40,23 @@ sudo dpkg -i filebeat-5.4.3-amd64.deb
 
 오류가 많다..
 현재 문제 : NAT 관련 세팅이 되어있지 않아 ELK 설치가 진행되지 않음.
+
+>>> Docker-compose를 사용해서 깔려 있는 최신 ELK stack을 사용하기로 함.
+
+#### Git clone
+`git clone https://github.com/deviantony/docker-elk`
+
+#### Elasticsearch에서 X-pack(유료) X
+해당 내용 제거
+
+#### Docker 빌드 & 실행, 종료
+- 실행
+`docker-compose build && docker-compose up -d`
+
+- 종료
+`docker-compose down -v`
+
+#### 접속
+Elasticsearch : 9200 / 9300
+Logstash : 5000 / 9600
+Kibana : 5601

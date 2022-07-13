@@ -60,3 +60,27 @@ sudo dpkg -i filebeat-5.4.3-amd64.deb
 Elasticsearch : 9200 / 9300
 Logstash : 5000 / 9600
 Kibana : 5601
+
+#### elasticsearch에 nori 플러그인 설치
+- bash shell 접근
+```
+docker exec -it docker_elk_elasticsearch_1 /bin/bash
+```
+
+- analysis-nori plug-in 설치
+```
+cd /usr/share/elasticsearch/bin/
+./elasticsearch-plugin install analysis-nori
+```
+
+- user_dictionary 파일 생성
+```
+cd /usr/share/elasticsearch/config
+mkdir userdict_ko.txt
+```
+
+- Index analyzer 생성
+```
+
+- curl 명령을 이용해서 es 클러스터 조회
+`curl -XGET -u [elasticID]:[elasticPW] "localhost:9200"`

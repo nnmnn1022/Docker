@@ -52,6 +52,8 @@ HOST 환경을 사용하여 작업을 할 수 있는 서버 설정
 
 2. docker run ~~~ > Container 만들기
 
+- `docker commit CONTAINER IMAGE_NAME` 사용하여 이미지로 만들 수 있다.
+
 ## Dockerfile 명령어
 1. FROM : 운영체제를 가져오는 듯
 

@@ -182,5 +182,8 @@ PUT my_index/_doc/1
 }
 ```
 
+#### Elastic search 가용 용량 확인
+`curl -XGET -u [elastic]:[PW] "http://localhost:9200/_cat/allocation?v"`
+
 #### 나중에 참고해볼만한 내용
 https://utto.tistory.com/35

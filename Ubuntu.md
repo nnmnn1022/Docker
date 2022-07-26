@@ -23,3 +23,24 @@ adduser --disabled-password --gecos "" umoo \
 1. `sudo apt update`
 2. `sudo apt-get install software-properties-common`
 
+
+## yum 업데이트
+`apt install yum` 으로 yum을 설치
+
+`E: Unable to locate package yum`
+위 에러는 ubuntu에서 package를 다운로드 받지 못해서 나오는 에러.
+
+`cd /etc/apt` 이동 후 sources.list 백업.
+`sudo cp sources.list sources.list.back`
+
+`vim sources.list`
+```
+deb http://archive.ubuntu.com/ubuntu bionic main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu bionic-security main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu bionic-updates main restricted universe multiverse
+```
+추가
+
+## vim 다운로드
+`apt-get update`
+`apt-get install vim`
